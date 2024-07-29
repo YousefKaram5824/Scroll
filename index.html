@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="moon.png">
+</head>
+
+<body>
+    <div class="box">
+        <div class="item" style="--img:url('yoya2.png');" data-text="yoya🧡"></div>
+        <div class="item" style="--img:url('yoya3.jpg');" data-text="yoya💛"></div>
+        <div class="item" style="--img:url('yoya4.jpg');" data-text="yoya💚"></div>
+        <div class="item" style="--img:url('yoya5.jpg');" data-text="yoya🩵"></div>
+        <div class="item" style="--img:url('yoya6.jpg');" data-text="yoya💙"></div>
+        <div class="item" style="--img:url('yoya1.jpg');" data-text="yoya💜"></div>
+        <div class="item" style="--img:url('yoya7.jpg');" data-text="yoya🖤"></div>
+        <div class="item" style="--img:url('yoya2.png');" data-text="yoya🩶"></div>
+        <div class="item" style="--img:url('yoya3.jpg');" data-text="yoya🤍"></div>
+        <div class="item" style="--img:url('yoya4.jpg');" data-text="yoya🤎"></div>
+        <div class="item" style="--img:url('yoya5.jpg');" data-text="yoya❤️‍🔥"></div>
+        <div class="item" style="--img:url('yoya6.jpg');" data-text="yoya💖"></div>
+        <div class="item" style="--img:url('yoya1.jpg');" data-text="❤️أشطر كتكوتة "></div>
+        <div class="item" style="--img:url('yoya7.jpg');" data-text="yoya🩷"></div>
+    </div>
+    <a href="https://yousefkaram5824.github.io/Scroll-Down/" style="--clr: #1900ff"><span>Click Me</span><i></i></a>
+    <script>
+        let box = document.querySelector('.box');
+        function moveNext() {
+            let items = document.querySelectorAll('.item');
+            box.appendChild(items[0]);
+        }
+        function movePerv() {
+            let items = document.querySelectorAll('.item');
+            box.prepend(items[items.length - 1]);
+        }
+        window.addEventListener('wheel', function (event) {
+            if (event.deltaY > 0) {
+                moveNext();
+            } else {
+                movePerv();
+            }
+        })
+    </script>
+</body>
+
+</html>
